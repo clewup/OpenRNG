@@ -1,0 +1,82 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider files (if you use JetBrains Rider)
+.idea/
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of PackageReference in project files
+packages/
+
+# ASP.NET files
+*.log
+*.vspscc
+*.vssscc
+
+# Publish output
+publish/
+wwwroot/
+
+# IIS Express
+iisexpress/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Coverage results
+*.coverage
+*.coveragexml
+*.testresults/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Other files
+*.dbmdl
+*.bak
+*.backup
+*.cache
+*.config
+
+# User-specific files
+*.pidb
+*.userprefs
+
+# Rider
+.idea/
+
+# DotEnv files
+.env
+
+# Dotnet tools
+.tools/
+
+# Entity Framework files
+*.efcore
+
+# Logs
+*.log
+
+# Mac files
+.DS_Store
+
+# Npm dependencies (if you use npm in your project)
+node_modules/
+
+# JetBrains Rider cache
+.idea/
+
+# dotnet watch
+.hotreload/
+
