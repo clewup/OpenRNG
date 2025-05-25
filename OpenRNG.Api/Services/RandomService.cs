@@ -1,9 +1,10 @@
 using System.Security.Cryptography;
+using Microsoft.Extensions.Caching.Memory;
 using OpenRNG.Api.Services.Interfaces;
 
 namespace OpenRNG.Api.Services;
 
-public class RandomService : IRandomService
+public class RandomService(IMemoryCache memoryCache) : IRandomService
 {
     private static readonly char[] Letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
     private static readonly char[] Digits = "0123456789".ToCharArray();
@@ -39,32 +40,45 @@ public class RandomService : IRandomService
         return new string(passwordChars);
     }
 
-    public string GenerateLoremIpsum(int wordCount)
+    public string GenerateLoremIpsum(int wordCount = 10)
     {
-        var words = new List<string>(wordCount);
-
-        for (int i = 0; i < wordCount; i++)
+        string cacheKey = $"lorem_{wordCount}";
+        
+        return memoryCache.GetOrCreate(cacheKey, entry =>
         {
-            int index = RandomNumberGenerator.GetInt32(0, LoremWords.Length);
-            words.Add(LoremWords[index]);
-        }
+            entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10);
 
-        if (words.Count > 0)
-        {
-            words[0] = char.ToUpper(words[0][0]) + words[0].Substring(1);
-            words[words.Count - 1] += ".";
-        }
+            var words = new List<string>(wordCount);
 
-        return string.Join(" ", words);
+            for (int i = 0; i < wordCount; i++)
+            {
+                int index = RandomNumberGenerator.GetInt32(0, LoremWords.Length);
+                words.Add(LoremWords[index]);
+            }
+
+            if (words.Count > 0)
+            {
+                words[0] = char.ToUpper(words[0][0]) + words[0].Substring(1);
+                words[words.Count - 1] += ".";
+            }
+
+            return string.Join(" ", words);
+        })!;
     }
     
     public string GenerateAvatarUrl(string seed, string style = "initials")
     {
         var encodedSeed = Uri.EscapeDataString(seed.Trim().ToLower());
+        string cacheKey = $"avatar_{style}_{encodedSeed}";
+        
+        return memoryCache.GetOrCreate(cacheKey, entry =>
+        {
+            entry.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(30);
+            
+            var avatarUrl = $"https://api.dicebear.com/9.x/{style}/svg?seed={encodedSeed}";
 
-        var avatarUrl = $"https://api.dicebear.com/9.x/{style}/svg?seed={encodedSeed}";
-
-        return avatarUrl;
+            return avatarUrl;
+        })!;
     }
     
     public string GetRandomHexColor()
