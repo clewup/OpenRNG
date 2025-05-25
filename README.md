@@ -1,6 +1,6 @@
 # 🎲 OpenRNG
 
-[![build](https://img.shields.io/github/actions/workflow/status/clewup/OpenRNG/ci.yml?branch=main)](https://github.com/clewup/OpenRNG/actions)
+[![build](https://img.shields.io/github/actions/workflow/status/clewup/OpenRNG/main_openrngapi.yml?branch=main)](https://github.com/clewup/OpenRNG/actions)
 [![coverage](https://coveralls.io/repos/github/clewup/OpenRNG/badge.svg?branch=main)](https://coveralls.io/github/clewup/OpenRNG?branch=main)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
