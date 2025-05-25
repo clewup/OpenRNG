@@ -2,7 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using OpenRNG.Api.Controllers;
 using OpenRNG.Api.Models;
-using OpenRNG.Api.Services.Interfaces;
+using OpenRNG.Core.Models;
+using OpenRNG.Core.Services.Interfaces;
 
 namespace OpenRNG.Tests.Controllers;
 

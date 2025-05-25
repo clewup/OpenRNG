@@ -1,6 +1,6 @@
 using AspNetCoreRateLimit;
-using OpenRNG.Api.Services;
-using OpenRNG.Api.Services.Interfaces;
+using OpenRNG.Core.Services;
+using OpenRNG.Core.Services.Interfaces;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);

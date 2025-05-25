@@ -2,7 +2,7 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using OpenRNG.Api.Controllers;
-using OpenRNG.Api.Services.Interfaces;
+using OpenRNG.Core.Services.Interfaces;
 
 namespace OpenRNG.Tests.Controllers;
 

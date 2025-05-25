@@ -1,4 +1,4 @@
-namespace OpenRNG.Api.Models;
+namespace OpenRNG.Core.Models;
 
 public class DistributionItem
 {

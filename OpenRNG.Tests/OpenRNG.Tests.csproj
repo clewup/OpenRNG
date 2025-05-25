@@ -23,6 +23,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\OpenRNG.Api\OpenRNG.Api.csproj" />
+      <ProjectReference Include="..\OpenRNG.Core\OpenRNG.Core.csproj" />
     </ItemGroup>
 
 </Project>

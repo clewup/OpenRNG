@@ -1,6 +1,4 @@
-using OpenRNG.Api.Models;
-
-namespace OpenRNG.Api.Services.Interfaces;
+namespace OpenRNG.Core.Services.Interfaces;
 
 public interface IShuffleService
 {

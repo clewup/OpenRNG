@@ -1,8 +1,7 @@
 using System.Security.Cryptography;
 using Microsoft.AspNetCore.Mvc;
 using OpenRNG.Api.Models;
-using OpenRNG.Api.Services;
-using OpenRNG.Api.Services.Interfaces;
+using OpenRNG.Core.Services.Interfaces;
 
 namespace OpenRNG.Api.Controllers;
 

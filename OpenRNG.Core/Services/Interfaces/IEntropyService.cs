@@ -1,6 +1,6 @@
-using OpenRNG.Api.Models;
+using OpenRNG.Core.Models;
 
-namespace OpenRNG.Api.Services.Interfaces;
+namespace OpenRNG.Core.Services.Interfaces;
 
 public interface IEntropyService
 {

@@ -1,8 +1,8 @@
 using System.Security.Cryptography;
 using Microsoft.Extensions.Caching.Memory;
-using OpenRNG.Api.Services.Interfaces;
+using OpenRNG.Core.Services.Interfaces;
 
-namespace OpenRNG.Api.Services;
+namespace OpenRNG.Core.Services;
 
 public class RandomService(IMemoryCache memoryCache) : IRandomService
 {

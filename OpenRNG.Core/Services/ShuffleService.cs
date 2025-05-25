@@ -1,8 +1,7 @@
 using System.Security.Cryptography;
-using OpenRNG.Api.Models;
-using OpenRNG.Api.Services.Interfaces;
+using OpenRNG.Core.Services.Interfaces;
 
-namespace OpenRNG.Api.Services;
+namespace OpenRNG.Core.Services;
 
 public class ShuffleService : IShuffleService
 {

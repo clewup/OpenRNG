@@ -1,4 +1,4 @@
-using OpenRNG.Api.Services;
+using OpenRNG.Core.Services;
 
 public class EntropyServiceTests
 {

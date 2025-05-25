@@ -1,5 +1,5 @@
 using Microsoft.Extensions.Caching.Memory;
-using OpenRNG.Api.Services;
+using OpenRNG.Core.Services;
 
 public class RandomServiceTests
 {

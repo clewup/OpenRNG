@@ -1,3 +1,5 @@
+using OpenRNG.Core.Models;
+
 namespace OpenRNG.Api.Models;
 
 public class EntropyResponse

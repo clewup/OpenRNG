@@ -1,4 +1,4 @@
-namespace OpenRNG.Api.Services.Interfaces;
+namespace OpenRNG.Core.Services.Interfaces;
 
 public interface IRandomService
 {
