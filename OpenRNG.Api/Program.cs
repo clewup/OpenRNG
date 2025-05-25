@@ -32,6 +32,7 @@ builder.Services.AddInMemoryRateLimiting();
 
 builder.Services.AddTransient<IEntropyService, EntropyService>();
 builder.Services.AddTransient<IRandomService, RandomService>();
+builder.Services.AddTransient<IShuffleService, ShuffleService>();
 
 var app = builder.Build();
 
