@@ -22,9 +22,20 @@ builder.Services.Configure<IpRateLimitOptions>(options =>
         {
             Endpoint = "*",
             Period = "1m",
-            Limit = 60
+            Limit = 100
         }
     };
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", builder =>
+    {
+        builder
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
 });
 
 builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
@@ -43,6 +54,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseIpRateLimiting();
+app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 
 app.MapGet("/", context =>
