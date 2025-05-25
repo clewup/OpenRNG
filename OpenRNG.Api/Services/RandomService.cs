@@ -34,7 +34,7 @@ public class RandomService(IMemoryCache memoryCache) : IRandomService
         var passwordChars = new char[length];
         for (int i = 0; i < length; i++)
         {
-            passwordChars[i] = characterSet[GetSecureRandomInt(0, characterSet.Count)];
+            passwordChars[i] = characterSet[GetSecureRandomInt(0, characterSet.Count - 1)];
         }
 
         return new string(passwordChars);
