@@ -1,6 +1,6 @@
 # 🎲 OpenRNG
 
-[![build](https://img.shields.io/github/actions/workflow/status/clewup/OpenRNG/ci.yml?branch=main)](https://github.com/clewup/OpenRNG/actions)
+[![build](https://img.shields.io/github/actions/workflow/status/clewup/OpenRNG/main_openrngapi.yml?branch=main)](https://github.com/clewup/OpenRNG/actions)
 [![coverage](https://coveralls.io/repos/github/clewup/OpenRNG/badge.svg?branch=main)](https://coveralls.io/github/clewup/OpenRNG?branch=main)
 ![license](https://img.shields.io/badge/license-MIT-green)
 
@@ -25,8 +25,8 @@
 
 The OpenRNG API is designed to be accessible publicly for developers and testers who need secure and reliable random data generation.
 
-- [Try it out with Scalar](https://clewup.github.io/OpenRNG/)
-- Base URL: https://api.openrng.com
+- [Try it out with Scalar](https://openrngapi-h8b7hsajbbcxfter.westeurope-01.azurewebsites.net/scalar/v1)
+- Base URL: https://openrngapi-h8b7hsajbbcxfter.westeurope-01.azurewebsites.net
 - No authentication is required for most endpoints to enable quick and easy access.
 - Rate limiting is enforced to ensure fair usage and prevent abuse (default: 100 requests per minute per IP).
 - Caching is implemented on key endpoints like lorem text and avatar generation to optimize performance.
