@@ -47,11 +47,8 @@ builder.Services.AddTransient<IShuffleService, ShuffleService>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-    app.MapScalarApiReference();
-}
+app.MapOpenApi();
+app.MapScalarApiReference();
 
 app.UseIpRateLimiting();
 app.UseCors("AllowAll");
