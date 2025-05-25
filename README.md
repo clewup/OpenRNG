@@ -3,7 +3,7 @@
 [![build](https://img.shields.io/github/actions/workflow/status/clewup/OpenRNG/main_openrngapi.yml?branch=main)](https://github.com/clewup/OpenRNG/actions)
 [![coverage](https://coveralls.io/repos/github/clewup/OpenRNG/badge.svg?branch=main)](https://coveralls.io/github/clewup/OpenRNG?branch=main)
 ![license](https://img.shields.io/badge/license-MIT-green)
-![NuGet](https://img.shields.io/nuget/v/OpenRNG.Core)
+[![NuGet](https://img.shields.io/nuget/v/OpenRNG.Core)](https://www.nuget.org/packages/OpenRNG.Core/)
 
 > OpenRNG is a versatile and open-source .NET API providing cryptographically secure random data generation and entropy analysis tools. It offers endpoints to generate random integers, lorem ipsum text, avatars, colors, passwords, and entropy metrics — ideal for developers, testers, and security enthusiasts.
 
