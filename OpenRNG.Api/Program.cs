@@ -30,6 +30,7 @@ builder.Services.Configure<IpRateLimitOptions>(options =>
 builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>();
 builder.Services.AddInMemoryRateLimiting();
 
+builder.Services.AddTransient<IEntropyService, EntropyService>();
 builder.Services.AddTransient<IRandomService, RandomService>();
 
 var app = builder.Build();
