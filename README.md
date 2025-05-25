@@ -25,7 +25,7 @@
 
 The OpenRNG API is designed to be accessible publicly for developers and testers who need secure and reliable random data generation.
 
-- [Try it out with Scalar](https://clewup.github.io/OpenRNG/)
+- [Try it out with Scalar](https://openrngapi-h8b7hsajbbcxfter.westeurope-01.azurewebsites.net/scalar/v1)
 - Base URL: https://api.openrng.com
 - No authentication is required for most endpoints to enable quick and easy access.
 - Rate limiting is enforced to ensure fair usage and prevent abuse (default: 100 requests per minute per IP).
